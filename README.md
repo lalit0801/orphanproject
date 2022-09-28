@@ -557,3 +557,9 @@ SQLite uses dynamic types for tables. It means you can store any value in any co
 SQLite allows a single database connection to access multiple database files simultaneously. This brings many nice features like joining tables in different databases or copying data between databases in a single command.
 SQLite is capable of creating in-memory databases that are very fast to work with.
  
+#How to run the project?
+Steps:
+1.After getting access of file, copy it into your c drive.
+2. Go to the file, open command prompt.
+3. Type "python manage.py runserver"
+4. Go to your local browser and open localhost:8000 server to see final output.
