@@ -1,0 +1,264 @@
+{% load static %}
+{% include 'template/adminheader.html' %}
+{% include 'template/adminmenu.html' %}
+<!---</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<center><form>
+{% for x in alldata %}
+		<div class="col-md-6">
+		<div class="row">
+		Date Of Joining<input type=text name=t1 value={{x.dateofjoining}}><br/><br/><br/>
+		Name<input type=text name=t1 value={{x.firstname}}{{x.middlename}}{{x.lastname}}><br/><br/><br/>
+		Gender<input type=text name=t1 value={{x.gender}}><br/><br/><br/>
+		Dob<input type=text name=t1 value={{x.dob}}><br/><br/><br/>
+		Religion<input type=text name=t1 value={{x.religion}}><br/><br/><br/>
+		Height<input type=text name=t1 value={{x.height}}><br/><br/><br/>
+		Hair-Color<input type=text name=t1 value={{x.haircolor}}><br/><br/><br/>
+		Eye-Color<input type=text name=t1 value={{x.eyecolor}}><br/><br/><br/>
+		Other Description<input type=text name=t1 value={{x.otherdescription}}><br/><br/><br/>
+		Allergy<input type=text name=t1 value={{x.y1}}><br/><br/><br/>
+		Unusal behaviour<input type=text name=t1 value={{x.y2}}><br/><br/><br/>
+		Mental disorder</th><input type=text name=t1 value={{x.y3}}><br/><br/><br/>
+		Violent Behaviour</th><input type=text name=t1 value={{x.y4}}><br/><br/><br/>
+		Disability<input type=text name=t1 value={{x.y5}}><br/><br/><br/>
+		Other Descriptions<input type=text name=t1 value={{x.otherdescriptions}}><br/><br/><br/>
+		      
+		child image<img src="{{x.childimage.url}}" height="100" width="100" />
+		</div>
+		
+		<form action="/updatechildren1/" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="t1" value="{{ x.p_id }}"/>
+		<br/><br/><br/><button type="submit" class="btn btn-primary">Update</button>
+		</form>
+	
+{% endfor %}
+</center>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>-->
+  
+
+<!--demmo2-->
+    
+
+    
+
+	<div class="page-heading text-center">
+
+		<div class="container zoomIn animated">
+			
+			<h1 class="page-title">ORPHAN DETAILS FORM<span class="title-under"></span></h1>
+	
+			
+		</div>
+
+	</div>
+
+	<div class="main-container fadeIn animated">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-7 col-sm-12 col-form">
+
+					<h2 class="title-style-2">update data<span class="title-under"></span></h2>
+{% for x in alldata %}
+					<form action="/finalupdate/" method="post" class="contact-form" enctype="multipart/form-data">
+						{% csrf_token %}
+						<div class="row">
+						  
+							<div class="form-group col-md-6">
+							 <input type="hidden" class="form-control" name="t21" value={{x.p_id}}>
+							</div>
+							</div>
+						<div class="row">
+						 
+						  	<div class="form-group col-md-3">
+													Date of joining 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="date" class="form-control" name="t1" value={{x.dateofjoining}}>
+							</div>
+							</div>
+							<div class="row">
+							<div class="form-group col-md-3">
+ 
+							 First Name 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t22" value= {{x.firstname}}>  
+							</div>
+							</div>	
+							<div class="row">
+							<div class="form-group col-md-3">
+ 
+							Middle Name 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t23" value= {{x.middlename}}>
+							</div>
+							</div>
+		<div class="row">							
+							<div class="form-group col-md-3">
+ 
+							 Last Name 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t24" value= {{x.lastname}}> 
+							</div>
+							</div>	
+							<div class="row">
+							<div class="form-group col-md-3">
+ 
+							 Gender 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t3" value ={{x.gender}}>
+							</div></div>
+							<div class="row">
+							<div class="form-group col-md-3">
+ 
+							 Dob 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="date" class="form-control" name="t4" value={{x.dob}}>
+							</div>
+							</div>
+								<div class="row">
+							<div class="form-group col-md-3">
+							 Religion 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t5"  value={{x.religion}}>
+							</div>
+							</div>
+							<div class="row">
+							<div class="form-group col-md-3">
+							 height 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t6"  value={{x.height}}>
+							</div>
+							 
+							</div>
+							 <div class="row">
+								<div class="form-group col-md-3">
+							 Hair-Color 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t25"  value={{x.haircolor}}>
+							</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-md-3">
+							 Eye-Color 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t7"  value={{x.eyecolor}}>
+							</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-md-3">
+							 other description 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t8"  value={{x.otherdescription}}>
+							</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-md-3">
+							 Allergy 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t9"  value={{x.y1}}>
+							</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-md-3">Unusal Behaviour </div>
+								 
+								<div class="form-group col-md-6">
+									<input type="text" class="form-control" name="t10"  value={{x.y2}}>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-md-3"> Mental Disorder </div>
+								 
+								<div class="form-group col-md-6">
+									<input type="text" class="form-control" name="t11"  value={{x.y3}}>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="form-group col-md-3">    
+							 Violent behaviour 
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t12"  value={{x.y4}}>
+							</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-md-3">
+							 Disability
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t13"  value={{x.y5}}>
+							</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-md-3">
+							 Description of issues?
+							</div>
+							<div class="form-group col-md-6">
+							 <input type="text" class="form-control" name="t14"  value={{x.otherdescriptions}}>
+							</div>
+							</div>
+							
+							
+							
+	
+							 
+						 
+						
+						 
+
+							
+
+                       
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        
+							
+                        </div>
+
+                        <div class="clearfix"></div>
+						</div>
+
+					</form>
+					{% endfor %}
+					 
+
+			</div> <!-- /.row -->
+
+
+		</div>
+		
+
+
+	</div>
+
+			
+
+				
+	
+ 
+
+
+{% include 'template/adminfooter.html' %}

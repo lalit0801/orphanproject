@@ -1,0 +1,751 @@
+{% load static %}
+{% include 'template/header.html' %}
+<!DOCTYPE html>
+<body>
+ <header class="main-header">
+        
+    
+        <nav class="navbar navbar-static-top">
+
+            <div class="navbar-top">
+
+              <div class="container">
+                  <div class="row">
+
+                    <div class="col-sm-6 col-xs-12">
+
+                        <ul class="list-unstyled list-inline header-contact">
+                            <li> <i class="fa fa-phone"></i> <a href="tel:">+91455667687 </a> </li>
+                             <li> <i class="fa fa-envelope"></i> <a href="mailto:klalit434@gmail.com">klalit434@gmail.com</a> </li>
+                       </ul> <!-- /.header-contact  -->
+                      
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12 text-right">
+
+                        <ul class="list-unstyled list-inline header-social">
+
+                            <li> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
+                            <li> <a href="#"> <i class="fa fa-twitter"></i>  </a> </li>
+                            <li> <a href="#"> <i class="fa fa-youtube"></i>  </a> </li>
+                            <li> <a href="#"> <i class="fa fa-instagram"></i>  </a> </li>
+                           
+                       </ul> <!-- /.header-social  -->
+                      
+                    </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+
+            <div class="navbar-main">
+              
+              <div class="container">
+
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                  </button>
+                  
+                  <a  href="/index/"><img src="{% static 'assets\images\logo\logo1.jpg' %}" alt="" height="60px" width="100px" style="margin-top:0px;"></a>
+                  
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse pull-right">
+
+                  <ul class="nav navbar-nav">
+
+                    <li><a class="is-active" href="/index/">HOME</a></li>
+                    <li><a href="/about/">ABOUT</a></li>
+                    <li class="has-child"><a href="#">CAUSES</a>
+
+                      <ul class="submenu">
+                         <li class="submenu-item"><a href="/causes/">Causes list </a></li>
+                         <li class="submenu-item"><a href="/causessingle/">Our Beliefs </a></li>
+                      </ul>
+
+                    </li>
+                    <li><a href="/gallery/">GALLERY</a></li>
+                    <li><a href="/contact/">CONTACT</a></li>
+                    <li><a href="/registration/">REGISTER</a></li>
+                    <li><a href="/login/">LOGIN</a></li>
+
+                  </ul>
+
+                </div> <!-- /#navbar -->
+
+              </div> <!-- /.container -->
+              
+            </div> <!-- /.navbar-main -->
+
+
+        </nav> 
+		
+
+    </header> <!-- /. main-header -->   
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="homeCarousel" class="carousel slide carousel-home" data-ride="carousel">
+
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#homeCarousel" data-slide-to="1"></li>
+            <li data-target="#homeCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <div class="carousel-inner" role="listbox">
+
+            <div class="item active">
+			
+
+              <img src="{% static 'assets/images/slider/home-slider-1.jpg' %}" alt="">
+
+              <div class="container">
+
+                <div class="carousel-caption">
+				
+				<marquee  direction="right" scrollamount="20"><h1 class="carousel-title bounceInDown animated slow"><font face="Algerian" ><b><u> ORPHAN CHILDREN HOME</u></b></font></h1></br></br></marquee>
+                  <h2 class="carousel-title bounceInDown animated slow">Because they need your help</h2>
+                  <h4 class="carousel-subtitle bounceInUp animated slow ">Do not let them down</h4>
+                  <a href="/login/" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow">DONATE NOW</a>
+				
+                </div> <!-- /.carousel-caption -->
+
+              </div>
+
+            </div> <!-- /.item -->
+
+
+            <div class="item ">
+			<a href="">
+			
+              <img src="{% static 'assets/images/slider/home-slider-2.jpg' %}" alt=""></a>
+
+              <div class="container">
+
+                <div class="carousel-caption">
+				<marquee  direction="right" scrollamount="20"><h1 class="carousel-title bounceInDown animated slow"><font face="Algerian" ><b><u> ORPHAN CHILDREN HOME</u></b></font></h1></br></br></br></marquee>
+                  <h2 class="carousel-title bounceInDown animated slow">Together we can improve their lives</h2>
+                  <h4 class="carousel-subtitle bounceInUp animated slow"> 
+				  <a href="/contact/">So let's do it ! </h4></a>
+                  <a href="/login/" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated">DONATE NOW</a>
+				 
+                </div> <!-- /.carousel-caption -->
+
+              </div>
+
+            </div> <!-- /.item -->
+
+
+
+
+            <div class="item ">
+
+              <img src="{% static 'assets/images/slider/home-slider-3.jpg' %}" alt="">
+
+              <div class="container">
+
+                <div class="carousel-caption">
+				<marquee  direction="right" scrollamount="20"><h1 class="carousel-title bounceInDown animated slow"><font face="Algerian" ><b> <u>ORPHAN CHILDREN HOME</u></b></font></h1></br></br></br></marquee>
+
+                  <h2 class="carousel-title bounceInDown animated slow" >A penny is a lot of money, if you have not got a penny.</h2>
+                  <h4 class="carousel-subtitle bounceInUp animated slow">You can make the diffrence !</h4>
+                  <a href="/login/" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow">DONATE NOW</a>
+
+                </div> <!-- /.carousel-caption -->
+
+              </div>
+
+            </div> <!-- /.item -->
+
+          </div>
+
+          <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+
+          <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+
+    </div><!-- /.carousel -->
+
+    <div class="section-home about-us fadeIn animated">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+                
+                  <div class="about-us-col">
+
+                        <div class="col-icon-wrapper">
+                          <img src="{% static 'assets/images/icons/our-mission-icon.png' %}" alt="">
+                        </div>
+                        <h3 class="col-title">our mission</h3>
+                        <div class="col-details">
+						<p>WE RESCUE, TRAIN AND SUSTAIN STRUGGLING CHILDREN’S HOMES.
+						   Mainstreaming the Orphan, Semi Orphan and Street children by providing care, 
+						   support through shelter, food, and care is our mission.
+
+						</p>
+                    </div>
+                  </div>
+                  
+                </div>
+
+
+                <div class="col-md-3 col-sm-6">
+                
+                  <div class="about-us-col">
+
+                        <div class="col-icon-wrapper">
+                          <img src="{% static 'assets/images/icons/make-donation-icon.png' %}" alt="">
+                        </div>
+                        <h3 class="col-title">Make donations</h3>
+                        <div class="col-details">
+
+									  You can make an difference.</br><p>
+									  Your one time donation will help a child to thrive.
+									  Fundraising for Orphan Home helps find loving families for orphaned children. 
+									  Every donation makes a genuine difference.</p>
+						</div>
+                  </div>
+                  
+                </div>
+
+
+                <div class="col-md-3 col-sm-6">
+                
+                  <div class="about-us-col">
+
+                        <div class="col-icon-wrapper">
+                          <img src="{% static 'assets/images/icons/help-icon.png' %}" alt="">
+                        </div>
+                        <h3 class="col-title">Help & support</h3>
+                        <div class="col-details">
+								   <p>Helping create miracle.</b>
+									  Real happiness and peace lie when our efforts and contributions lead to helping others. 
+									  Dedicate a percentage of the profits of your business each month to Families for Orphans</p>
+						</div>
+                  </div>
+                  
+                </div>
+
+
+                <div class="col-md-3 col-sm-6">
+                
+                  <div class="about-us-col">
+
+                        <div class="col-icon-wrapper">
+                          <img src="{% static 'assets/images/icons/programs-icon.png' %}" alt="">
+                        </div>
+                        <h3 class="col-title">our programs</h3>
+                        <div class="col-details">
+
+                                     <p>Ensuring every child has an opportunity to find a home.
+									  Our work in the past was grounded in helping orphans in need to have a better quality of life but has evolved to also ensure that every child has an opportunity to grow up in a family. 
+									 </p>
+						</div>
+                    
+                  </div>
+                  
+                </div>
+                
+
+                
+            </div>
+
+        </div>
+      
+    </div> <!-- /.about-us -->
+
+   
+    <div class="section-home home-reasons">
+
+        <div class="container">
+
+            <div class="row">
+                
+                <div class="col-md-6">
+
+                    <div class="reasons-col animate-onscroll fadeIn">
+
+                        <img src="{% static 'assets/images/reasons/we-fight-togother.jpg' %}" alt="">
+
+                        <div class="reasons-titles">
+
+                            <h3 class="reasons-title">We fight together</h3>
+                            <h5 class="reason-subtitle">We are humans</h5>
+                            
+                        </div>
+
+                        <div class="on-hover hidden-xs">
+                            
+                                
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <div class="reasons-col animate-onscroll fadeIn">
+
+                        <img src="{% static 'assets/images/reasons/we-care-about.jpg' %}" alt="">
+
+                        <div class="reasons-titles">
+
+                            <h3 class="reasons-title">WE care about others</h3>
+                            <h5 class="reason-subtitle">We are humans</h5>
+                            
+                        </div>
+
+                        <div class="on-hover hidden-xs">
+                            
+                                
+                        </div>
+
+
+                    </div>
+                    
+                </div>
+
+
+            </div>
+          
+  
+
+        </div>
+      
+
+    </div> <!-- /.home-reasons -->
+
+    <div class="section-home our-causes animate-onscroll fadeIn">
+ 
+        <div class="container">
+
+            <h2 class="title-style-1">Our Causes <span class="title-under"></span></h2>
+
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="cause">
+
+                        <img src="{% static 'assets/images/causes/cause-hunger.jpg' %}" alt="" class="cause-img">
+
+                        <div class="progress cause-progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                            3000 / 20000
+                          </div>
+                        </div>
+
+                        <h4 class="cause-title"><a href="#">HUNGER AND POVERTY </a></h4>
+                        <div class="cause-details">
+						Poverty is believed to be the leading cause of orphaned children around the world.Losing a parent can negatively impact a child’s access to food, shelter, education and healthcare. 
+                        </div>
+
+                        <div class="btn-holder text-center">
+
+                          <a class="btn btn-primary" href="/login/"> DONATE NOW</a>
+                          
+                        </div>
+
+                        
+
+                    </div>
+<!-- /.cause -->
+                    
+                </div> 
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="cause">
+
+                        <img src="{% static 'assets/images/causes/cause-education.jpg' %}" alt="" class="cause-img">
+
+                        <div class="progress cause-progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            1000/ 7000
+                          </div>
+                        </div>
+
+                        <h4 class="cause-title"><a href="#">EDUCATION AND TRAINING</a></h4>
+                        <div class="cause-details">
+                        Education is the key to ending the world’s orphan crisis.providing the resources (financial and supplies) that help orphans gain access to educational services.                        </div>
+
+                        <div class="btn-holder text-center">
+
+                          <a class="btn btn-primary" href="/login/"> DONATE NOW</a>
+                          
+                        </div>
+
+                        
+
+                    </div> <!-- /.cause -->
+                    
+                </div>
+
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="cause">
+
+                        <img src="{% static 'assets/images/causes/cause-rights.jpg' %}" alt="" class="cause-img">
+
+                        <div class="progress cause-progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                            4000 /10000
+                          </div>
+                        </div>
+
+                        <h4 class="cause-title"><a href="#">HUMAN RIGHTS</a></h4>
+                        <div class="cause-details">
+						The orphans need help around the world to insure that 
+						they are granted the rights that all humans deserve. 
+						Their rights include clothing, food, shelter, and education.So that the orphans can grow and develop,
+						both physically and mentally.						
+						</div>
+
+                        <div class="btn-holder text-center">
+
+                          <a class="btn btn-primary" href="/login/"> DONATE NOW</a>
+                          
+                        </div>
+
+                        
+
+                    </div> <!-- /.cause -->
+                    
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+                    <div class="cause">
+
+                        <img src="{% static 'assets/images/causes/cause-culture.jpg' %}" alt="" class="cause-img">
+
+                        <div class="progress cause-progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            500 / 7000
+                          </div>
+                        </div>
+
+                        <h4 class="cause-title"><a href="#">ARTS AND CULTURE</a></h4>
+                        <div class="cause-details">
+						Imparting life skills through arts education is considered to be of great 
+						value to the orphan children.Life skills are essentially 
+						those abilities that help promote mental well-being and competence as they
+                        face the realities of life.
+                        </div>
+
+                        <div class="btn-holder text-center">
+
+                          <a class="btn btn-primary" href="/login/"> DONATE NOW</a>
+                          
+                        </div>
+
+                        
+
+                    </div> <!-- /.cause -->
+                    
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div> <!-- /.our-causes -->
+
+    
+ <div class="our-team animate-onscroll fadeIn">
+
+	        <div class="container">
+
+	            <h2 class="title-style-1">Our Team <span class="title-under"></span></h2>
+
+	            <div class="row">
+
+	                <div class="col-md-3 col-sm-6">
+
+	                    <div class="team-member">
+
+	                        <div class="thumnail">
+
+	                            <img src="{% static 'assets\images\logo\founder2.jpeg' %}" alt="" class="cause-img" height="50%" width="50%">
+	                            
+	                        </div>
+
+
+
+	                        <h4 class="member-name">Lalit Kumar Yadav</h4>
+
+	                        <div class="member-position">
+	                            CO-FOUNDER
+	                        </div>
+
+	                        <div class="btn-holder">
+
+	                         klalit434@gmail.com
+	                        </div>
+
+	                        
+
+	                    </div> <!-- /.team-member -->
+	                    
+	                </div>
+
+	                <div class="col-md-3 col-sm-6">
+
+	                    <div class="team-member">
+
+	                        <div class="thumnail">
+
+	                            <img src="{% static 'assets\images\logo\founder8.jpeg' %}" alt="" class="cause-img" height="50%" width="50%">
+	                            
+	                        </div>
+
+
+
+	                        <h4 class="member-name">Khuspreet Kaur</h4>
+
+	                        <div class="member-position">
+	                            CO-FOUNDER
+	                        </div>
+
+	                        <div class="btn-holder">
+
+	                          khusipreet4@gmail.com
+	                          
+	                        </div>
+
+	                        
+
+	                    </div> <!-- /.team-member -->
+	                    
+	                </div>
+
+
+	                <div class="col-md-3 col-sm-6">
+
+	                    <div class="team-member">
+
+	                        <div class="thumnail">
+
+	                            <img src="{% static 'assets\images\logo\founder23.jpeg' %}" alt="" class="cause-img" height="50%" width="50%">
+	                            
+	                        </div>
+
+
+
+	                        <h4 class="member-name">Nimar Brar</h4>
+
+	                        <div class="member-position">
+	                            CO-FOUNDER
+	                        </div>
+
+	                        <div class="btn-holder">
+
+	                         braaur645@gmail.com 
+	                        </div>
+
+	                        
+
+	                    </div> <!-- /.team-member -->
+	                    
+	                </div>
+
+
+	                <div class="col-md-3 col-sm-6">
+
+	                    <div class="team-member">
+
+	                        <div class="thumnail">
+
+	                            <img src="{% static 'assets\images\logo\founder44.jpeg' %}" alt="" class="cause-img">
+	                            
+	                        </div>
+
+
+
+	                        <h4 class="member-name">Anju Atkan</h4>
+
+	                        <div class="member-position">
+	                            CO-FOUNDER
+	                        </div>
+
+	                        <div class="btn-holder">
+
+	                         anju428@gmail.com
+	                          
+	                        </div>
+
+	                        
+
+	                    </div> <!-- /.team-member -->
+	                    
+	                </div>
+
+	            </div> <!-- /.row -->
+
+	        </div>
+
+	    </div>
+		
+
+
+	</div>
+
+
+
+    <div class="section-home our-sponsors animate-onscroll fadeIn">
+    
+        <div class="container">
+
+            <h2 class="title-style-1">Our Sponsors <span class="title-under"></span></h2>
+
+            <ul class="owl-carousel list-unstyled list-sponsors">
+
+              <li> <img src="{% static 'assets/images/sponsors/church.png' %}" alt=""></li>
+              <li> <img src="{% static 'assets\images\sponsors\infowiz.jpg' %}" alt=""></li>
+              <li> <img src="{% static 'assets/images/sponsors/gurudwara.png' %}" alt=""></li>
+              <li> <img src="{% static 'assets/images/sponsors/gurunanak.jpg' %}" alt=""></li>
+              <li> <img src="{% static 'assets\images\sponsors\sophiya.jpg' %}" alt=""></li>
+
+              <li> <img src="{% static 'assets/images/sponsors/church.png' %}" alt=""></li>
+              <li> <img src="{% static 'assets/images/sponsors/infowiz.jpg' %}" alt=""></li>
+              <li> <img src="{% static 'assets/images/sponsors/gurudwara.png' %}" alt=""></li>
+              <li> <img src="{% static 'assets/images/sponsors/gurunanak.jpg' %}" alt=""></li>
+              <li> <img src="{% static 'assets\images\sponsors\sophiya.jpg' %}" alt=""></li>
+
+            </ul>
+
+        </div>
+
+    </div> <!-- /.our-sponsors -->
+	
+	
+	<!-- Donate Modal -->
+    <div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="donateModalLabel" aria-hidden="true">
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="donateModalLabel">DONATE NOW</h4>
+          </div>
+          <div class="modal-body">
+
+                <form class="form-donation">
+
+                        <h3 class="title-style-1 text-center">Thank you for your donation <span class="title-under"></span>  </h3>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-12 ">
+                                <input type="text" class="form-control" id="amount" placeholder="AMOUNT">
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" name="firstName" placeholder="First name*" required="required">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" name="lastName" placeholder="Last name*">
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" name="email" placeholder="Email*">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" name="phone" placeholder="Phone">
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" name="address" placeholder="Address">
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="form-group col-md-12">
+                                <textarea cols="30" rows="4" class="form-control" name="note" placeholder="Additional note"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-12">
+                                <button type="submit" class="btn btn-primary pull-right" name="donateNow" >DONATE NOW</button>
+                            </div>
+
+                        </div>                    
+                </form>
+            
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /.modal -->
+</div>
+
+    <!--  Scripts
+    ================================================== -->
+
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{% static 'assets/js/jquery-1.11.1.min.js' %}"><\/script>')</script>
+
+    <!-- Bootsrap javascript file -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    
+    <!-- owl carouseljavascript file -->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+
+    <!-- Template main javascript -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    </body>
+</html>
+
+{% include 'template/footer.html' %}

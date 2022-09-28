@@ -1,0 +1,390 @@
+{% load static %}
+{% include  'template/header.html' %}
+<!DOCTYPE html>
+<style>
+.main{
+margin-top:20px;
+height:800px;
+width:100%;
+position:fixed;
+background:rgba(0,0,0,0.5);
+z-index:99999;
+display:none;
+
+}
+.login4{
+height:600px;
+width:600px;
+position:fixed;
+background:white;
+z-index:99999;
+left:0px;
+right:0px;
+margin:80px auto;
+display:none;
+
+
+}
+
+</style>
+ <body>
+<div class="main"></div>
+<div class="login4">
+<div class="modal-body">
+
+	<div class="page-heading offset">
+
+		<div class="container zoomIn animated">
+			
+			<h1 class="page-title">LOGIN FORM <span class="title-under"></span></h1>
+	
+			
+		</div>
+
+	</div>
+
+	<div class="main-container fadeIn animated">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-7 col-sm-12 col-form">
+
+					<h2 class="title-style-2">LOGIN FORM <span class="title-under"></span></h2>
+
+					<form action="/logindata/" method="post"  class="contact-form ">
+					{% csrf_token %}
+						<div class="row">
+							<div class="form-group col-md-6">
+							<input type="email" class="form-control" name="email" placeholder="abc@gmail.com*">
+							</div>
+						</div>
+					<div class="row">
+							<div class="form-group col-md-6">
+							<input type="password" class="form-control" name="password" placeholder="password*">
+							</div>
+					</div>
+						
+
+                        <div class="form-group alerts">
+                        
+                        	<div class="alert alert-success" role="alert">
+							  
+							</div>
+
+							<div class="alert alert-danger" role="alert">
+							  
+							</div>
+							
+                        </div>	
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">LOGIN</button>
+                        </div>
+
+                        <div class="clearfix"></div>
+						</div>
+
+					</form>
+					
+			
+
+				
+
+			</div> <!-- /.row -->
+
+
+		</div>
+		
+
+
+	</div>
+
+
+       
+   
+</div>
+</div>
+    <body>
+    <!-- NAVBAR
+    ================================================== -->
+
+    <header class="main-header">
+        
+    
+        <nav class="navbar navbar-static-top">
+
+            <div class="navbar-top">
+
+              <div class="container">
+                  <div class="row">
+
+                    <div class="col-sm-6 col-xs-12">
+
+                        <ul class="list-unstyled list-inline header-contact">
+                            <li> <i class="fa fa-phone"></i> <a href="tel:">+917087788675</a> </li>
+                             <li> <i class="fa fa-envelope"></i> <a href="mailto:klalit434@gmail.com">klalit434@gmail.com</a> </li>
+                       </ul> <!-- /.header-contact  -->
+                      
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12 text-right">
+
+                        <ul class="list-unstyled list-inline header-social">
+
+                            <li> <a href="https://www.facebook.com/"> <i class="fa fa-facebook"></i> </a> </li>
+                            <li> <a href="https://twitter.com/"> <i class="fa fa-twitter"></i>  </a> </li>
+                            <li> <a href="https://youtube.com/channel/"> <i class="fa fa-youtube"></i>  </a> </li>
+                            <li> <a href="https://www.instagram.com/"> <i class="fa fa-instagram"></i>  </a> </li>
+                           
+                       </ul> <!-- /.header-social  -->
+                      
+                    </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+
+            <div class="navbar-main">
+              
+              <div class="container">
+
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                  </button>
+                  
+                  <a class="navbar-brand" href="index.html"><img src="{% static 'assets/images/logo/logo1.jpg' %}" alt="" height="40px" width="100px" style="margin-top:0px;"></a>
+                  
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse pull-right">
+
+                  <ul class="nav navbar-nav">
+
+                    <li><a href="/index/">HOME</a></li>
+                    <li><a href="/about/">ABOUT</a></li>
+                    <li class="has-child "><a class="is-active" href="#">CAUSES</a>
+
+                      <ul class="submenu">
+                         <li class="submenu-item"><a href="/causes/">Causes list </a></li>
+                         <li class="submenu-item"><a href="/causessingle/">Our Beliefs </a></li>
+                      </ul>
+
+                    </li>
+                    <li><a href="/gallery/">GALLERY</a></li>
+                    <li><a href="/contact/">CONTACT</a></li>
+					<li><a href="/registration/">REGISTER</a></li>
+					<li><a class="login1" style="cursor:pointer">LOGIN</a></li>
+
+                  </ul>
+
+                </div> <!-- /#navbar -->
+
+              </div> <!-- /.container -->
+              
+            </div> <!-- /.navbar-main -->
+
+
+        </nav> 
+
+    </header> <!-- /. main-header -->
+
+
+	<div class="page-heading text-center">
+
+		<div class="container zoomIn animated">
+			
+			<h1 class="page-title">Our Beliefs <span class="title-under"></span></h1>
+			<p class="page-description">
+			</p>
+			
+		</div>
+
+	</div>
+
+	<div class="main-container">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-12 fadeIn animated">
+
+					<p><h3><u>THE PROBLEM</u></h3>
+						As you read this, millions of children are separated from their families, living in institutions or on the streets. Many survive with substandard care, unloved and at risk – all of them dreaming of a family. In the worst cases, this environment exposes children to devastating abuse and psychological trauma, creating adults who are 10x more likely to become sex workers and 50x more likely to be in prison.
+
+But, we are also in the midst of a profound paradigm shift. Efforts are being made to reform foster care systems, support families before separation occurs and reunite families where preventable separation has occurred. We all know kids everywhere deserve better.
+
+A movement has begun and Miracle Foundation is on the front line.
+
+					</p>
+
+				</div>
+
+				<div class="col-md-12 fadeIn animated">
+
+					<div id="cause-carousel" class="carousel slide cause-carousel" data-ride="carousel">
+
+						  <!-- Indicators -->
+						  <ol class="carousel-indicators">
+						    <li data-target="#cause-carousel" data-slide-to="0" class="active"></li>
+						    <li data-target="#cause-carousel" data-slide-to="1"></li>
+						  </ol>
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+
+						    <div class="item active">
+
+						      <img src="{% static 'assets/images/causes/slider/cause-slider-1.jpg' %}" alt="">
+						      
+						    </div>
+
+						    <div class="item">
+
+						      <img src="{% static 'assets/images/causes/slider/cause-slider-2.jpg' %}" alt="">
+						      
+						    </div>
+
+						  </div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="row fadeIn animated">
+
+				<div class="col-md-6">
+
+					<h2 class="title-style-2"> THE SOLUTION<span class="title-under"></span></h2>
+
+					<p>
+						Our work in the past was grounded in helping orphans in need to have a better quality of life but has evolved to also ensure that every child has an opportunity to grow up in a family. 
+						Our goal is to prevent children from entering the 
+						system in the first place.Ensure that every child thrives
+All children are entitled to an education, nutrition, health, and protective services
+
+					</p>
+
+				</div>
+									<div class="col-md-4 col-md-offset-1 col-contact">
+
+					<img src="{% static 'assets\images\solution1.jpg' %}" style="border:0px solid black"  height="250px" width="530">
+					
+					
+				</div>
+
+				
+
+			</div></br></br></br></br>
+
+				<div class="row fadeIn animated">
+
+				<div class="col-md-6">
+						<img src="{% static 'assets\images\beliefs.jpg' %}" style="border:0px solid black"  height="250px" width="530">
+
+				</div>
+					
+
+				
+			<div class="col-md-4 col-md-offset-1 col-contact">
+<h2 class="title-style-2"> Our BELIEFS<span class="title-under"></span></h2>
+
+					<p>
+						<h1>“Injustice anywhere is a threat to justice everywhere.”</h1>
+
+									
+</div>
+					</p>
+					
+					</br>
+					</br>
+					</br>
+					</br>
+					</br>
+					</br>
+					
+					
+			
+<div class="main-container">
+
+	<div class="container">
+
+		<div class="row">
+			<div class="row fadeIn animated">
+
+				<div class="col-md-12">
+
+					</br>
+					</br>
+					</br>
+					</br>
+					<h2 class="title-style-2"> At Orphan Child Home, we believe…<span class="title-under"></span></h2>
+
+					
+
+				
+						
+We believe that all children have the right to grow up in a stable, loving and nurturing environment.  
+
+We believe that all human beings on our planet regardless of geography, religious orientation, skin color, gender or sexual orientation are of equal value. 
+
+We believe in standing in uncompromising solidarity with peaceful movements to prevent the marginalization of human beings everywhere. 
+
+We believe that Black Lives Matter.
+
+We believe that all children, regardless of race, religion, sect or caste have the same fundamental rights.  
+
+We believe in collaboration, inclusion, partnerships, ordinary heroes, honesty, agility, straight talk and miracles.  
+
+We believe in children.  We believe in their right to be heard and participate in decisions that affect them.   
+
+We believe in giving each other the benefit of the doubt, leveraging each other’s best skills, listening, learning and caring deeply about all stakeholders.  
+
+We believe that all of us are a stakeholder in the care of the planet and each other the world over.   
+									
+
+					</p>
+					
+					
+				</div>
+
+				
+
+			</div>		
+		</div>
+	</div>
+</div>
+				
+				</div>
+
+		
+
+		
+
+
+	</div> <!-- /.main-container  -->
+{% include  'template/footer.html' %}
+<script>
+jQuery(document).ready(function(){
+	jQuery(".login1").click(function(){
+		jQuery(".main").show();
+		jQuery(".login4").show();
+	});
+	jQuery(".main").click(function(){
+		jQuery(".main").hide();
+		jQuery(".login4").hide();
+	});
+	
+});
+</script>

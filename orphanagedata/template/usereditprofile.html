@@ -1,0 +1,113 @@
+
+{% load static %}
+{% include 'template/userheader.html' %}
+{% include 'template/usermenu.html' %}
+<!DOCTYPE html>
+
+    <body>
+	<div class="page-heading text-center">
+
+		<div class="container zoomIn animated">
+			
+			<h1 class="page-title">EDIT PROFILE <span class="title-under"></span></h1>
+	
+			
+		</div>
+
+	</div>
+
+	<div class="main-container fadeIn animated">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-7 col-sm-12 col-form">
+
+					<h2 class="title-style-2">EDIT FORM <span class="title-under"></span></h2>
+					<br><br><br>
+     				<br>
+					<br>
+					
+					<form action="/editprofiledata/" method="post" class="contact-form" enctype="multipart/form-data">
+					{% csrf_token %}
+						<div class="row">
+							<div class="form-group col-md-6">
+							<input type="text" class="form-control" name="firstname" placeholder="First name" value="{{x.firstname}}">
+							</div>
+						
+						</div>
+						
+						<div class="row">
+
+                            <div class="form-group col-md-6">
+                               <input type="text" class="form-control" name="email" placeholder="Email" value="{{x.email}}">
+                            </div>
+						</div>
+					
+						<div class="row">
+
+                           <div class="form-group col-md-6">
+                               <input type="password" class="form-control" name="password" placeholder="password" value="{{x.password}}">
+							</div>
+						
+						</div>
+                        <div class="row">
+							<div class="form-group col-md-6">
+                                <input type="text" class="form-control" name="phone" placeholder="Phone" value="{{x.phone}}" >
+                            </div>
+						</div>
+						  
+						<div class="row">
+							<div class="form-group col-md-6">
+								<input type="text" class="form-control" name="pincode" placeholder="pincode" value="{{x.pincode}}">
+                            </div>
+						</div>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-6">
+                                <textarea class="form-control" name="address" placeholder="Address
+								" rows="4" cols="4" value="{{x.address}}"></textarea>
+							</div>
+						</div>			
+
+                    					
+					        <div class="form-group alerts">
+                        
+                        	<div class="alert alert-success" role="alert">
+							  
+							</div>
+
+							<div class="alert alert-danger" role="alert">
+							  
+							</div>
+							
+                        </div>	
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">update </button>
+                        
+                        </div>
+
+                        <div class="clearfix"></div>
+						</div>
+
+					</form>
+					
+
+			
+
+
+			</div> <!-- /.row -->
+
+
+		</div>
+		
+
+
+	</div>
+
+	
+{% include 'template/userfooter.html' %}
+

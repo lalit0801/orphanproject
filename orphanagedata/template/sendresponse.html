@@ -1,0 +1,64 @@
+{% load static %}
+{% include 'template/adminheader.html' %}
+{% include 'template/adminmenu.html' %}
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<center><table border="2" bgcolor="lightgrey" cellpadding="2px" height="400px" width="100px">
+	<tr>
+		<th>ID</th>
+		<th>USER_ID</th>
+		<th>First NAME</th>
+		<th>LAST NAME</th>
+		<th>EMAIL</th>
+		<th>ADDRESS</th>
+		
+		<th>CHILD_ID</th>
+		<th>ORPHAN_ID</th>
+		<th>ORPHAN_NAME</th>
+		<th>GENDER</th>
+		<th>STATUS</th>
+		<th>ACTION</th>
+		<th>ACTION</th>
+		
+	</tr>
+{% for x in alldata %}
+	<tr bgcolor="lightblue">
+		<th>{{x.p_id}}</th>
+		<th>{{x.user_id}}</th>
+		<th>{{x.firstname}}</th>
+		<th>{{x.lastname}}</th>
+		<th>{{x.email}}</th>
+		<th>{{x.address}}</th>
+	
+		<th>{{x.child_id}}</th>
+		<th>{{x.orphanid}}</th>
+		<th>{{x.orphan_name}}</th>
+		<th>{{x.gender}}</th>
+		<th>{{x.status}}</th>
+		
+		<form action="/final/" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="t1" value="{{ x.p_id }}">
+		<th><button>Accept</button></th>
+		</form>
+		</th>
+		<th><form action="/deleteresponse/" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="t1" value="{{ x.p_id }}"/>
+		<button type="submit">Delete</button>
+		</form>
+		</th>
+	</tr>
+{% endfor %}
+</table></center>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+{% include 'template/adminfooter.html' %}

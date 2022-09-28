@@ -1,0 +1,50 @@
+{% load static %}
+{% include 'template/userheader.html' %}
+{% include 'template/usermenu.html' %}
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<center><table border="5" bgcolor="lightgrey" cellpadding="2px" height="400%" width="90%">
+	<tr>
+		<th>ID</th>
+		<th>USER_ID</th>
+		<th>First NAME</th>
+		<th>LAST NAME</th>
+		<th>EMAIL</th>
+		<th>ADDRESS</th>
+		<!--<th>USER_IMAGE</th>-->
+		<th>CHILD_ID</th>
+		<th>ORPHAN_ID</th>
+		<th>ORPHAN_NAME</th>
+		<th>GENDER</th>
+		<th>STATUS</th>
+	</tr>
+{% for x in alldata %}
+	<tr bgcolor="lightblue">
+		<th>{{x.p_id}}</th>
+		<th>{{x.user_id}}</th>
+		<th>{{x.firstname}}</th>
+		<th>{{x.lastname}}</th>
+		<th>{{x.email}}</th>
+		<th>{{x.address}}</th>
+		<!--<th><img src="{{ xx.user_image.url }}" height="100" width="100" /></th>-->
+		<th>{{x.child_id}}</th>
+		<th>{{x.orphanid}}</th>
+		<th>{{x.orphan_name}}</th>
+		<th>{{x.gender}}</th>
+		<th>{{x.status}}</th>
+	
+		
+	</tr>
+{% endfor %}
+</table></center>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+{% include 'template/userfooter.html' %}

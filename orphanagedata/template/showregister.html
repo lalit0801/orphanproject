@@ -1,0 +1,20 @@
+<table border="1" bgcolor="skyblue" cellpadding="20">
+	<tr>
+		<th>name</th>
+		<th>password</th>
+		<th>confirm</th>
+		<th>email</th>
+		<th>phone</th>
+		<th>image</th>
+		
+	</tr>
+{% for x in alldata %}
+	<tr>
+		<th>{{x.name}}</th>
+		<th>{{x.password}}</th>
+		<th>{{x.confirm}}</th>
+		<th>{{x.email}}</th>
+		<th>{{x.phone}}</th>
+		<th>{{x.image}}</th>
+	</tr>
+{% endfor %}

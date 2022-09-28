@@ -1,0 +1,136 @@
+{% load static %}
+{% include 'template/adminheader.html' %}
+{% include 'template/adminmenu.html' %}
+<!DOCTYPE html>
+
+    
+    <div class="section-home our-causes animate-onscroll fadeIn">
+
+        <div class="container">
+
+            <h2 class="title-style-1">ALL EVENTS <span class="title-under"></span></h2>
+
+            <div class="row">
+				{% for x in alldata %}
+				<div class="col-md-3 col-sm-6">
+				<style>
+				.cause {
+					padding-bottom: 15px;
+					margin-bottom: 30px;
+					border: 4px solid #1f76bd;
+				
+					}
+				</style>
+                    <div class="cause">
+								
+
+
+                        
+						
+						<font color="black">
+						<h4>p_id:	{{x.p_id}}</h4>
+						<h4>Type of Event:	{{x.eventtype}}</h4>
+						<h4>Name of Event:	{{x.name}}</h4>
+						<h4>Date of Event:	{{x.eventdate}}</h4>
+						<h4>Time of Event:{{x.eventtime}}</h4>
+						<h4>Place of Event:{{x.place}}</h4>
+						<h4>Organizer:{{x.organizer}}</h4>
+						<h4>Description:{{x.description}}</h4>
+		
+		
+		<!--update event -->
+		
+		<form action="/editevent1/" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="t21" value="{{ x.p_id }}"/>
+		<button type="submit" class="btn btn-primary">Edit</button>
+		</form>
+	
+						
+
+ {% endfor %}                       
+
+                    </div>
+
+                    
+                </div> 
+
+                
+                    
+                </div>
+
+            </div>
+
+        </div>
+        
+     
+
+    {% include 'template/adminfooter.html' %}
+
+
+
+
+<!--another way to show event to admin in the form of table-->
+ <!--   
+{% load static %}
+{% include 'template/adminheader.html' %}
+{% include 'template/adminmenu.html' %}
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<center>
+<table border="5" height="200%"  width="80%" cellpadding="2" bgcolor="lightgrey" >
+	<tr>
+		<th>Type of Event</th>
+		<th>Name of Event</th>
+		<th>Date of Event</th>
+		<th>Time of Event</th>
+		<th>Event Place</th>
+		<th>Event Organizer</th>
+		<th>Event Description</th>
+		<th>Event Image</th>
+		<th>Action</th>
+		<th>Action</th>
+		
+    </tr>
+{% for x in alldata %}
+	<tr bgcolor="lightblue">
+		<th>{{x.eventtype}}</th>
+		<th>{{x.name}}</th>
+		<th>{{x.eventdate}}</th>
+		<th>{{x.eventtime}}</th>
+		<th>{{x.place}}</th>
+		<th>{{x.organizer}}</th>
+		<th>{{x.description}}</th>
+		<th><img src="{{x.eventimg.url}}" height=100 width=100 /></th>
+		<th><form action="/deleteevent/" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="t1" value="{{ x.p_id }}"/>
+		<button type="submit" class="btn btn-primary">Delete</button>
+		<th><form action="/editevent/" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="t1" value="{{ x.p_id }}"/>
+		<button type="submit" class="btn btn-primary">Edit</button>
+		</form>
+		</th>
+	</tr>
+	</div>
+	</div>
+{% endfor %}
+</table></center>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+                
+                 
+{% include 'template/adminfooter.html' %}
+-->
+
+

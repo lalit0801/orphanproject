@@ -1,0 +1,72 @@
+  {% include 'template/userheader.html' %}
+  {% include 'template/usermenu.html' %}
+
+<!--edit profile-->
+    
+    <section class="ftco-section ftco-degree-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 order-md-last ftco-animate">
+           
+           
+            <div class="row mt-5 pt-5">
+              <div class="col-md-12">
+                <h2 class="mb-4 font-weight-bold" style="text-align: center;">EDIT PROFILE </h2>
+              </div>
+              <div class="col-lg-12">
+                {% for single in all %}
+    <form action="/editprofile1/" method="post">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-6">
+		<div class="form-group">
+        <label style="color: black;">Name</label>
+    <input type="text" class="form-control" name="firstname" value="{{single.firstname}}">
+    </div>
+      <div class="form-group">
+        <label style="color: black;">Password</label>
+    <input type="text" class="form-control" name="password" value="{{single.password}}">
+    </div>
+      <div class="form-group">
+        <label style="color: black;">Contact-Detail</label>
+    <input type="text" class="form-control" name="phone" value="{{single.phone}}">
+    </div>
+   </div>
+     <div class="col-md-6">
+      <div class="form-group">
+        <label style="color: black;">Email-Id</label>
+    <input type="text" class="form-control" name="email" value="{{single.email}}" disabled="disabled">
+    <input type="hidden" class="form-control" name="email" value="{{single.email}}">
+    </div>
+
+      <div class="form-group">
+        <label style="color: black;">Pincode</label>
+    <input type="text" class="form-control" name="pincode" value="{{single.pincode}}">
+    </div>
+
+      <div class="form-group">
+        <label style="color: black;">Address</label>
+    <textarea class="form-control" name="address" value="{{single.address}}">
+    </textarea>
+    </div>
+   </div>
+</div>
+    <div class="col-md-12">
+    <div class="form-group" style="text-align: center;">
+    <input type="submit" class="btn btn-lg bg-success" value="EDIT PROFILE">
+    </div>
+  </div>
+                </form>
+                {% endfor %}
+              </div>
+            </div>
+            
+
+
+          </div> <!-- .col-md-8 -->
+  
+      </div>
+    </section> <!-- .section -->
+
+
+    {% include 'template/userfooter.html' %}

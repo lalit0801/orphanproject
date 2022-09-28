@@ -1,0 +1,61 @@
+{% load static %}
+{% include 'template/adminheader.html' %}
+{% include 'template/adminmenu.html' %}
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<center><table border="5" cellpadding="2" height="90%" width="85%" >
+	<tr>
+		<th>ID</th><br>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>DOB</th>
+	
+		<th>Email</th>
+		
+	
+		<th>Address</th>
+		<th>phone</th>
+		<th>Pincode</th>
+		<th>City</th>
+		<th>State</th>
+		<th>gender</th>
+		<th>Image</th>
+		<th>Action</th>
+		
+	</tr>
+{% for x in alldata %}
+	<tr bgcolor="lightblue">
+		<th>{{x.p_id}}</th>
+		<th>{{x.firstname}}</th>
+		<th>{{x.lastname}}</th>
+		<th>{{x.dob}}</th>
+		
+		<th>{{x.email}}</th>
+		
+		<th>{{x.address}}</th>
+		<th>{{x.phone}}</th>
+		<th>{{x.pincode}}</th>
+		<th>{{x.city}}</th>
+		<th>{{x.state}}</th>
+		<th>{{x.gender}}</th>
+		<th><img src="{{ x.user_image.url }}" height="100" width="100" /></th>
+		<th><form action="/deleteuser/" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="t1" value="{{x.p_id}}"/>
+		<button type="submit" class="btn btn-primary">Delete</button>
+		</form>
+		</th>
+	</tr>
+{% endfor %}
+</table></center>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+{% include 'template/adminfooter.html' %}

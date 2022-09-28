@@ -1,0 +1,70 @@
+{% load static %}
+{% include 'template/adminheader.html' %}
+{% include 'template/adminmenu.html' %}
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<center><table border="2" bgcolor="lightgrey" cellpadding="0px" height="200%px" width="95%">
+	<tr>
+		<th>Orphan-id</th>
+		<th>Date<br/> Of Joining</th>
+		<th>First<br/> Name</th>
+		<th>Middle<br/> Name</th>
+		<th>Last<br/> Name</th>
+		<th>Gender</th>
+		<th>Dob</th>
+		<th>Religion</th>
+		<th>Height</th>
+		<th>Hair<br/>Color</th>
+		<th>Eye<br/>Color</th>
+		<th>Other<br/>Description</th>
+		<th>Allergy</th>
+		<th>Unusal<br/>behaviour</th>
+		<th>Mental<br/>disorder</th>
+		<th>Violent<br/>Behaviour</th>
+		<th>Disability</th>
+		<th>Other<br/>Descriptions</th>
+		<th>child<br/>image</th>
+		
+		
+	</tr>
+{% for x in alldata %}
+		<tr bgcolor="lightblue">
+		<th>{{x.orphanid}}</th>
+		<th>{{x.dateofjoining}}</th>
+		<th>{{x.firstname}}</th>
+		<th>{{x.middlename}}</th>
+		<th>{{x.lastname}}</th>
+		<th>{{x.gender}}</th>
+		<th>{{x.dob}}</th>
+		<th>{{x.religion}}</th>
+		<th>{{x.height}}</th>
+		<th>{{x.haircolor}}</th>
+		<th>{{x.eyecolor}}</th>
+		<th>{{x.otherdescription}}</th>
+		<th>{{x.y1}}</th>
+		<th>{{x.y2}}</th>
+		<th>{{x.y3}}</th>
+		<th>{{x.y4}}</th>
+		<th>{{x.y5}}</th>
+		<th>{{x.otherdescriptions}}</th>
+		      
+		<th><img src="{{x.childimage.url}}" height=100 width=100 /></th>
+		
+		
+		
+		
+	</tr>
+{% endfor %}
+</table></center>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+{% include 'template/adminfooter.html' %}
+{% include 'template/adminfooter.html' %}

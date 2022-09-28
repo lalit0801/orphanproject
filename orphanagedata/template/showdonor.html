@@ -1,0 +1,59 @@
+{% load static %}
+{% include 'template/adminheader.html' %}
+{% include 'template/adminmenu.html' %}
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<center><table border="2" bgcolor="lightgrey" cellpadding="2px" height="100px" width="90%">
+	<tr>
+		<th>AMOUNT</th>
+		<th>FIRST NAME</th>
+		<th>LAST NAME</th>
+		<th>EMAIL</th>
+		<th>PHONE NO.</th>
+		<th>ADDRESS</th>
+		<th>STATE</th>
+		<th>CITY</th>
+		<th>PINCODE</th>
+		<th>COMMENTS</th>
+		<th>Card No.</th>
+		<th>CVV</th>
+		<th>EXPIRY DATE</th>
+		<th>ACTION</th>
+	</tr>
+{% for x in alldata %}
+	<tr bgcolor="lightblue">
+		<th>{{x.amount}}</th>
+		<th>{{x.firstname}}</th>
+		<th>{{x.lastname}}</th>
+		<th>{{x.email}}</th>
+		<th>{{x.phone}}</th>
+		<th>{{x.address}}</th>
+		<th>{{x.state}}</th>
+		<th>{{x.city}}</th>
+		<th>{{x.pincode}}</th>
+		<th>{{x.note}}</th>
+		<th>{{x.cardno}}</th>
+		<th>{{x.cvv}}</th>
+		<th>{{x.expirydate}}</th>
+		<th><form action="/deletedonor/" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="t1" value="{{ x.p_id }}"/>
+		<button type="submit" class="btn btn-primary">Delete</button>
+		</form>
+		</th>
+		
+	</tr>
+
+{% endfor %}
+</table></center>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+{% include 'template/adminfooter.html' %}

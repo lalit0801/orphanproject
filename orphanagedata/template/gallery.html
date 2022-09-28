@@ -1,0 +1,251 @@
+{% load static %}
+{% include 'template/header.html' %}
+<!DOCTYPE html>
+
+    <body>
+    <!-- NAVBAR
+    ================================================== -->
+
+    <header class="main-header">
+        
+    
+        <nav class="navbar navbar-static-top">
+
+            <div class="navbar-top">
+
+              <div class="container">
+                  <div class="row">
+
+                    <div class="col-sm-6 col-xs-12">
+
+                        <ul class="list-unstyled list-inline header-contact">
+                            <li> <i class="fa fa-phone"></i> <a href="tel:">+435678678 </a> </li>
+                             <li> <i class="fa fa-envelope"></i> <a href="mailto:klalit434@gmail.com">klalit434@gmail.com</a> </li>
+                       </ul> <!-- /.header-contact  -->
+                      
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12 text-right">
+
+                        <ul class="list-unstyled list-inline header-social">
+
+                            <li> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
+                            <li> <a href="#"> <i class="fa fa-twitter"></i>  </a> </li>
+                            <li> <a href="#"> <i class="fa fa-youtube"></i>  </a> </li>
+                            <li> <a href="#"> <i class="fa fa-instagram"></i>  </a> </li>
+                           
+                       </ul> <!-- /.header-social  -->
+                      
+                    </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+
+            <div class="navbar-main">
+              
+              <div class="container">
+
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                  </button>
+                  
+                  <a class="navbar-brand" href="index.html"><img src="{% static 'assets\images\logo\logo1.jpg' %}" alt="" height="40px" width="100px" style="margin-top:0px;"></a>
+                  
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse pull-right">
+
+                  <ul class="nav navbar-nav">
+
+                    <li><a href="/index/">HOME</a></li>
+                    <li><a href="/about/">ABOUT</a></li>
+                    <li class="has-child"><a href="#">CAUSES</a>
+
+                      <ul class="submenu">
+                         <li class="submenu-item"><a href="/causes/">Causes list </a></li>
+                         <li class="submenu-item"><a href="/causessingle/">Our Beliefs </a></li>
+                      </ul>
+
+                    </li>
+                    <li><a class="is-active" href="/gallery/">GALLERY</a></li>
+                    <li><a href="/contact/">CONTACT</a></li>
+					<li><a   href="/registration/">REGISTER</a></li>
+					<li><a   href="/login/">LOGIN</a></li>
+
+                  </ul>
+
+                </div> <!-- /#navbar -->
+
+              </div> <!-- /.container -->
+              
+            </div> <!-- /.navbar-main -->
+
+
+        </nav> 
+
+    </header> <!-- /. main-header -->
+
+
+	<div class="page-heading text-center">
+
+		<div class="container zoomIn animated">
+			
+			<h1 class="page-title">GALLERY <span class="title-under"></span></h1>
+			<p class="page-description">
+			</p>
+			
+		</div>
+
+	</div>
+
+	<div class="main-container">
+
+		<div class="container gallery fadeIn animated">
+
+			<div class="row">
+				
+
+					<a href="{% static 'assets/images/gallery/7610291856_931fb9f461_k.jpg' %}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/7610291856_931fb9f461_k.jpg' %}" alt="">
+
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+
+					</a> <!-- /.gallery-item -->
+
+					<a href="{% static 'assets/images/gallery/children-82272_1280.jpg' %}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/children-82272_1280.jpg' %}" alt="">
+						
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+						
+					</a> <!-- /.gallery-item -->
+
+
+					<a href="{% static 'assets/images/gallery/human-rights.jpg' %}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/human-rights.jpg' %}" alt="">
+						
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+						
+					</a> <!-- /.gallery-item -->
+
+
+					<a href="{% static 'assets/images/gallery/old-books-436498_1280.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/old-books-436498_1280.jpg' %}" alt="">
+						
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+						
+					</a> <!-- /.gallery-item -->
+
+					<a href="{% static 'assets/images/gallery/hunger-682834_1280.jpg' %}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/hunger-682834_1280.jpg' %}" alt="">
+						
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+						
+					</a> <!-- /.gallery-item -->
+
+					<a href="{% static 'assets/images/gallery/africa-education.jpg' %}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/africa-education.jpg' %}" alt="">
+						
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+						
+					</a> <!-- /.gallery-item -->
+
+
+					<a href="{% static 'assets/images/gallery/afghani-60798_1280.jpg' %}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/afghani-60798_1280.jpg' %}" alt="">
+
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+
+					</a> <!-- /.gallery-item -->
+
+					<a href="{% static 'assets/images/gallery/boy-60729_1280.jpg' %}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/boy-60729_1280.jpg' %}" alt="">
+						
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+						
+					</a> <!-- /.gallery-item -->
+
+
+					<a href="{% static 'assets/images/gallery/child-207573_1280.jpg' %}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/child-207573_1280.jpg' %}" alt="">
+						
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+						
+					</a> <!-- /.gallery-item -->
+
+
+					<a href="{% static 'assets/images/gallery/children-60654_1280.jpg' %}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/children-60654_1280.jpg' %}" alt="">
+						
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+						
+					</a> <!-- /.gallery-item -->
+
+					<a href="{% static 'assets/images/gallery/doll-87407_1280.jpg' %}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/doll-87407_1280.jpg' %}" alt="">
+						
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+						
+					</a> <!-- /.gallery-item -->
+
+					<a href="{% static 'assets/images/gallery/girl-62328_1280.jpg' %}" class="col-md-3 col-sm-4 gallery-item lightbox">
+
+						<img src="{% static 'assets/images/gallery/thumb/girl-62328_1280.jpg' %}" alt="">
+						
+						<span class="on-hover">
+							<span class="hover-caption">Image Caption</span>
+						</span>
+						
+					</a> <!-- /.gallery-item -->
+					
+				
+			</div>
+			
+		</div>
+
+
+	</div> <!-- /.main-container  -->
+
+
+   {% include 'template/footer.html' %}

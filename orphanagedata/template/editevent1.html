@@ -1,0 +1,92 @@
+{% load static %}
+{% include 'template/adminheader.html' %}
+{% include 'template/adminmenu.html' %}
+<!DOCTYPE html>
+
+    
+
+	<div class="page-heading text-center">
+
+		<div class="container zoomIn animated">
+			
+			<h1 class="page-title">EVENTS DETAILS FORM<span class="title-under"></span></h1>
+	
+			
+		</div>
+
+	</div>
+
+	<div class="main-container fadeIn animated">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-7 col-sm-12 col-form">
+
+					<h2 class="title-style-2">Update Information <span class="title-under"></span></h2>
+					{% for x in dATA %}
+					<form action="/finaleditevent/" method="post" class="contact-form" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="row">
+						  
+							<div class="form-group col-md-6">
+							 <input type="hidden" class="form-control" name="t21" value="{{x.p_id}}">
+							</div>
+							</div>
+						<font color="black">
+						
+						<div class="row">
+							    <div class="form-group col-md-6">
+								Type Of Event:<input type="text" class="form-control" id="eventtype" name="eventtype" value={{x.eventtype}}>
+							    </div>
+								<div class="form-group col-md-6">
+								Name of Event:<input type="text" class="form-control" id="name" name="name" value={{x.name}} >
+								
+							    </div>
+						</div>
+						
+						<div class="row">
+							<div class="form-group col-md-6">
+							Date of Event:<input type="date" class="form-control" name="eventdate" placeholder="date of event" value={{x.eventdate}}>
+							</div>
+							<div class="form-group col-md-6">
+							Time of Event:<input type="time" class="form-control" name="eventtime" placeholder="Time of event" value={{x.eventtime}}>
+							</div>
+							
+						</div>
+						<div class="row">
+							<div class="form-group col-md-6">
+							Place of Event:<input type="text" class="form-control" name="place" placeholder="place of event" value={{x.place}}>
+							</div>
+							<div class="form-group col-md-6">
+                            Event Organizer<input type="text" class="form-control" name="organizer" placeholder="event organizer " value={{x.organizer}} >
+							</div>
+						</div>
+						<div class="row">
+
+                            <div class="form-group col-md-12">
+                             Description of Event<input type="text"  class="form-control" name="description" placeholder="description of event" rows="3" cols="3" value={{x.description}}></textarea>
+							</div>
+						</div>
+						
+					   <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+						 <div class="clearfix"></div>
+						</div>
+
+					</form>
+					{% endfor %}
+
+			</div> <!-- /.row -->
+
+
+		</div>
+		
+
+
+	</div>
+
+{% include 'template/adminfooter.html' %}
+

@@ -1,0 +1,104 @@
+{% load static %}
+{% include 'template/adminheader.html' %}
+{% include 'template/adminmenu.html' %}
+<!DOCTYPE html>
+
+    
+
+	<div class="page-heading text-center">
+
+		<div class="container zoomIn animated">
+			
+			<h1 class="page-title">EVENTS DETAILS FORM<span class="title-under"></span></h1>
+	
+			
+		</div>
+
+	</div>
+
+	<div class="main-container fadeIn animated">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-7 col-sm-12 col-form">
+
+					<h2 class="title-style-2">EVENT DETAILS<span class="title-under"></span></h2>
+
+					<form action="/registerevent/" method="post" class="contact-form" enctype="multipart/form-data">
+					{% csrf_token %}
+						<font color="black">
+						
+						<div class="row">
+							    <div class="form-group col-md-6">
+								Type Of Event:<select class="form-control" id="eventtype" name="eventtype" >
+								<option>select type of events</option>
+								<option>Educational Events</option>
+								<option>Environmental Events</option>
+								<option>Recreational Events</option>
+								<option>Fundraising Events</option>
+								<option>Party Events</option>
+								<option>Sports </option>
+								<option>Others </option>
+								</select>
+							    </div>
+								<div class="form-group col-md-6">
+								Name of Event:<input type="text" class="form-control" id="name" name="name" >
+								
+							    </div>
+						</div>
+						
+						<div class="row">
+							<div class="form-group col-md-6">
+							Date of Event:<input type="date" class="form-control" name="eventdate" placeholder="date of event">
+							</div>
+							<div class="form-group col-md-6">
+							Time of Event:<input type="time" class="form-control" name="eventtime" placeholder="Time of event">
+							</div>
+							
+						</div>
+						<div class="row">
+							<div class="form-group col-md-6">
+							Place of Event:<input type="text" class="form-control" name="place" placeholder="place of event">
+							</div>
+							<div class="form-group col-md-6">
+                            Event Organizer<input type="text" class="form-control" name="organizer" placeholder="event organizer " >
+							</div>
+						</div>
+						<div class="row">
+
+                            <div class="form-group col-md-12">
+                             Description of Event<textarea  class="form-control" name="description" placeholder="description of event" rows="3" cols="3"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-6">
+							Upload Image<input type="file" name="eimg">
+							</div>
+						</div>
+					   <div class="form-group">
+                            <button type="submit" class="btn btn-primary">ADD</button>
+                        </div>
+						 <div class="clearfix"></div>
+						</div>
+
+					</form>
+					<div class="col-md-4 col-md-offset-1 col-contact">
+
+					<img src="{% static 'assets\images\event1.jpg' %}" style="border:8px solid black"  height="550" width="530">
+					
+					
+				</div>
+
+			</div> <!-- /.row -->
+
+
+		</div>
+		
+
+
+	</div>
+
+{% include 'template/adminfooter.html' %}
+
